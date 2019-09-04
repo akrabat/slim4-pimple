@@ -1,0 +1,12 @@
+{
+    "require": {
+        "slim/slim": "^4.2",
+        "slim/psr7": "^0.5.0",
+        "pimple/pimple": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App/"
+        }
+    }
+}
