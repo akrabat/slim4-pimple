@@ -18,8 +18,10 @@ class HomePageHandler implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
+        $name = $request->getAttribute('route')->getArgument('name', $this->defaultName);
+
         $response = new Response();
-        $response->getBody()->write("Hello " . $this->defaultName);
+        $response->getBody()->write('Hello ' . $name);
         return $response;
     }
 }
